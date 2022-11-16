@@ -1,0 +1,16 @@
+--- 
+
+- name: Call URL
+  hosts: localhost
+  tasks:
+    - name: Use URI module
+      ansible.builtin.uri:
+        method: PUT
+        validate_certs: false 
+        body_format: json
+        headers:
+        Authorization: "Token"
+        body:
+          client-id: 8540dd52-438f-4164-8485-c8fa7dadd84c
+          client-key: yOG8Q~ByLhyLCv2~ljSQTBRJ2xji~ai6HNSRpb4b
+          issuer-url: https://login.microsoftonline.com/5c5478bb-3813-489e-9c75-b3915e88b59a/v2.0
